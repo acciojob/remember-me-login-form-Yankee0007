@@ -1,11 +1,10 @@
-//your JS code here. If required.
-const form = document.getElementById("login-form");
+const form = document.querySelector("form");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 const checkbox = document.getElementById("checkbox");
 const existingBtn = document.getElementById("existing");
 
-// check localStorage on page load
+// show existing button if saved
 const savedUser = localStorage.getItem("username");
 const savedPass = localStorage.getItem("password");
 
@@ -31,7 +30,7 @@ form.addEventListener("submit", function(e) {
   }
 });
 
-// existing user login
+// login existing user
 existingBtn.addEventListener("click", function() {
   const user = localStorage.getItem("username");
   alert(`Logged in as ${user}`);
